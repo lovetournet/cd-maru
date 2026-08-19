@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>㈜청도 | 건축자재 제조시스템 전문기업</title>
+  <meta name="description" content="㈜청도 - 석제단열패널, 실내벽체마감패널, 화장실칸막이">
+  <style>
+    :root{
+      --bg:#f6f2ea;
+      --panel:#fbf9f4;
+      --ink:#222222;
+      --muted:#6f6a63;
+      --accent:#b88a4a;
+      --line:#d9cfbf;
+      --dark:#2b2b29;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,"Noto Sans KR","Malgun Gothic",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+    header{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:blur(10px);
+      background:rgba(246,242,234,.88);
+      border-bottom:1px solid rgba(217,207,191,.6);
+    }
+    .nav{
+      height:70px;display:flex;align-items:center;justify-content:space-between;
+    }
+    .brand{font-weight:800;letter-spacing:-.02em}
+    .brand small{display:block;font-size:10px;letter-spacing:.18em;color:var(--muted);font-weight:600}
+    .navlinks{display:flex;gap:18px;font-size:13px;color:var(--muted)}
+    .hero{
+      min-height:74vh;display:grid;place-items:center;
+      position:relative;overflow:hidden;
+      border-bottom:1px solid var(--line);
+    }
+    .hero:before,.hero:after{
+      content:"";position:absolute;border:1px solid rgba(184,138,74,.18);
+    }
+    .hero:before{width:46vw;height:46vw;right:-18vw;top:12vh;transform:rotate(0deg)}
+    .hero:after{width:260px;height:120px;left:-80px;bottom:60px}
+    .hero-inner{width:100%;padding:92px 0 80px;position:relative}
+    .eyebrow{font-size:12px;letter-spacing:.18em;color:var(--accent);font-weight:700}
+    h1{
+      margin:14px 0 18px;
+      font-size:clamp(38px,7vw,76px);
+      line-height:1.05;
+      letter-spacing:-.05em;
+    }
+    h1 span{display:block;font-size:.52em;margin-top:14px;letter-spacing:-.03em}
+    .hero p{max-width:620px;color:var(--muted);font-size:17px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:46px;padding:0 18px;border:1px solid var(--dark);
+      font-size:14px;font-weight:700;
+    }
+    .btn.primary{background:var(--dark);color:white}
+    .btn.soft{border-color:var(--line);background:rgba(255,255,255,.34)}
+    section{padding:86px 0;border-bottom:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:34px}
+    .section-head h2{margin:0;font-size:30px;letter-spacing:-.04em}
+    .section-head p{margin:0;color:var(--muted);max-width:540px;font-size:14px}
+    .facts{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+      border:1px solid var(--line);
+    }
+    .fact{background:var(--panel);padding:28px 22px;min-height:150px}
+    .fact b{display:block;color:var(--accent);font-size:20px;margin-bottom:8px}
+    .fact span{display:block;font-size:13px;color:var(--muted)}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{
+      background:var(--panel);border:1px solid var(--line);padding:26px;
+      min-height:300px;position:relative;overflow:hidden;
+    }
+    .num{color:var(--accent);font-weight:800;font-size:18px}
+    .card h3{font-size:23px;line-height:1.25;margin:18px 0 8px;letter-spacing:-.04em}
+    .card .eng{font-size:11px;letter-spacing:.12em;color:var(--muted)}
+    .card p{color:var(--muted);font-size:14px;margin-top:22px}
+    .tag{display:inline-block;margin-top:18px;padding:5px 9px;border:1px solid var(--line);font-size:11px;color:var(--muted)}
+    .flow{
+      margin-top:30px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      text-align:center;font-weight:700;letter-spacing:.02em;
+    }
+    .flow span{color:var(--accent);padding:0 7px}
+    .about-copy{max-width:760px;font-size:17px;letter-spacing:-.02em}
+    .about-copy strong{font-weight:800}
+    .contact{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:20px;
+    }
+    .contact-box{background:var(--dark);color:white;padding:34px}
+    .contact-box p{color:#d6d1c7}
+    .contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+    .contact-actions .btn{border-color:#bdb7ad;color:white}
+    footer{padding:28px 0;color:var(--muted);font-size:12px}
+    @media (max-width:760px){
+      .navlinks{display:none}
+      .hero{min-height:auto}
+      .hero-inner{padding:76px 0 64px}
+      .section-head{display:block}
+      .section-head p{margin-top:10px}
+      .facts,.products,.contact{grid-template-columns:1fr}
+      section{padding:64px 0}
+      .fact{min-height:auto}
+      .card{min-height:0}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">㈜청도<small>CHEONGDO ARCHITECTURAL MATERIALS</small></div>
+    <nav class="navlinks">
+      <a href="#company">회사소개</a>
+      <a href="#products">핵심제품</a>
+      <a href="#contact">문의</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">CHEONGDO COMPANY PROFILE</div>
+      <h1>건축의 가치를 높이는<span>건축자재 제조시스템 전문기업 ㈜청도</span></h1>
+      <p>건축 내·외장재를 직접 개발·생산하며, 품질과 시공성, 현장 적용성을 고려한 건축자재를 공급합니다.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#products">3대 핵심제품 보기</a>
+        <a class="btn soft" href="#contact">문의하기</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>회사 한눈에 보기</h2>
+        <p>공공건축 현장에서 필요한 제품과 기술을 한눈에 확인할 수 있도록 핵심 정보만 간결하게 정리했습니다.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>2014</b><strong>법인 설립</strong><span>건축자재 제조 전문기업</span></div>
+        <div class="fact"><b>장성군 삼서면</b><strong>본사 및 제조시설</strong><span>제품 개발·생산 기반</span></div>
+        <div class="fact"><b>조달등록제품</b><strong>공공조달 대응</strong><span>핵심 제품군 조달 등록</span></div>
+        <div class="fact"><b>장애인기업</b><strong>공공조달 우선구매 대상</strong><span>공공기관 납품 대응</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>청도의 3대 핵심제품</h2>
+        <p>제품의 역할이 한눈에 보이도록 대표 제품군을 중심으로 구성했습니다.</p>
+      </div>
+      <div class="products">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>석제단열패널</h3>
+          <div class="eng">STONE INSULATED PANEL</div>
+          <p>외벽 단열과 석재 마감을 하나로 구성한 외장 솔루션.</p>
+          <span class="tag">조달등록제품</span>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <h3>실내벽체마감패널</h3>
+          <div class="eng">INTERIOR WALL PANEL</div>
+          <p>공공시설을 비롯한 다양한 실내 공간에 적용 가능한 벽체 마감 시스템.</p>
+          <span class="tag">조달등록제품</span>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <h3>화장실칸막이</h3>
+          <div class="eng">TOILET CUBICLE</div>
+          <p>학교·공공시설 화장실에 적용하는 방수 PB + HPM 기반 칸막이 시스템.</p>
+          <span class="tag">조달등록제품</span>
+        </article>
+      </div>
+      <div class="flow">설계 <span>→</span> 제조 <span>→</span> 납품 <span>→</span> 시공까지</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>청도가 만드는 기준</h2>
+      </div>
+      <div class="about-copy">
+        <strong>㈜청도는 건축 내·외장재를 직접 개발·생산하는 전문 제조기업입니다.</strong><br>
+        축적된 기술력을 바탕으로 품질과 시공성, 현장 적용성을 고려한 건축자재를 개발·공급하고 있습니다.
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="contact-box">
+        <div class="eyebrow">CONTACT</div>
+        <h2 style="margin:12px 0 6px;font-size:30px">제품·조달 문의</h2>
+        <p>전화번호, 카탈로그 PDF, 오시는 길 링크는 원하시는 정보로 교체할 수 있습니다.</p>
+        <div class="contact-actions">
+          <a class="btn" href="tel:">전화 문의</a>
+          <a class="btn" href="#" onclick="alert('카탈로그 PDF 링크를 연결해 주세요.'); return false;">카탈로그 보기</a>
+        </div>
+      </div>
+      <div style="padding:24px 6px">
+        <strong>㈜청도</strong><br><br>
+        <span style="color:var(--muted)">주소</span><br>
+        전남 장성군 삼서면<br><br>
+        <span style="color:var(--muted)">Website</span><br>
+        cd-maru.com
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© CHEONGDO. All rights reserved.</div>
+</footer>
+</body>
+</html>

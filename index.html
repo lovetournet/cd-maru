@@ -102,7 +102,15 @@
     .contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
     .contact-actions .btn{border-color:#bdb7ad;color:white}
     footer{padding:28px 0;color:var(--muted);font-size:12px}
+    .catalog-section{background:#eee9df}
+    .catalog-intro{margin-bottom:28px}
+    .catalog-pages{max-width:760px;margin:0 auto;display:grid;gap:18px}
+    .catalog-page{margin:0;background:#fff;box-shadow:0 14px 36px rgba(43,43,41,.12);overflow:hidden}
+    .catalog-page img{display:block;width:100%;height:auto}
     @media (max-width:760px){
+      .catalog-pages{gap:10px}
+      .catalog-page{box-shadow:0 8px 22px rgba(43,43,41,.10)}
+
       .navlinks{display:none}
       .hero{min-height:auto}
       .hero-inner{padding:76px 0 64px}
@@ -122,6 +130,7 @@
     <nav class="navlinks">
       <a href="#company">회사소개</a>
       <a href="#products">핵심제품</a>
+      <a href="#catalog">카탈로그</a>
       <a href="#contact">문의</a>
     </nav>
   </div>
@@ -200,6 +209,24 @@
     </div>
   </section>
 
+
+  <section id="catalog" class="catalog-section">
+    <div class="wrap">
+      <div class="section-head catalog-intro">
+        <h2>CHEONGDO CATALOG</h2>
+        <p>㈜청도의 회사소개와 핵심제품, 석제단열패널 주요 정보를 카탈로그로 확인해 보세요.</p>
+      </div>
+      <div class="catalog-pages">
+        <figure class="catalog-page"><img src="images/catalog-01.webp" alt="㈜청도 회사소개 카탈로그 표지" loading="lazy"></figure>
+        <figure class="catalog-page"><img src="images/catalog-02.webp" alt="㈜청도 카탈로그 목차" loading="lazy"></figure>
+        <figure class="catalog-page"><img src="images/catalog-03.webp" alt="㈜청도 회사소개" loading="lazy"></figure>
+        <figure class="catalog-page"><img src="images/catalog-04.webp" alt="㈜청도 3대 핵심제품" loading="lazy"></figure>
+        <figure class="catalog-page"><img src="images/catalog-05.webp" alt="㈜청도 석제단열패널 소개" loading="lazy"></figure>
+        <figure class="catalog-page"><img src="images/catalog-06.webp" alt="㈜청도 석제단열패널 구조" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="wrap contact">
       <div class="contact-box">
@@ -208,7 +235,7 @@
         <p>전화번호, 카탈로그 PDF, 오시는 길 링크는 원하시는 정보로 교체할 수 있습니다.</p>
         <div class="contact-actions">
           <a class="btn" href="tel:">전화 문의</a>
-          <a class="btn" href="#" onclick="alert('카탈로그 PDF 링크를 연결해 주세요.'); return false;">카탈로그 보기</a>
+          <a class="btn" href="#catalog">카탈로그 보기</a>
         </div>
       </div>
       <div style="padding:24px 6px">

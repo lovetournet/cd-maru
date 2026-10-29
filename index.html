@@ -642,17 +642,16 @@ h1 .hero-title-hover{display:inline-block;margin:0;font-size:inherit;font-weight
 .solution-caption small{display:block;font-size:13px;letter-spacing:.1em;opacity:.8}
 .solution-caption h3{font-size:26px;margin:3px 0 5px}
 .solution-caption p{font-size:14px;margin:0;color:#e3ebf2}
-.solution-overlay{position:absolute;z-index:3;inset:0;display:flex;flex-direction:column;justify-content:center;padding:26px 30px;background:rgba(7,34,61,.93);color:white;opacity:0;transform:translateY(18px);transition:opacity .32s ease,transform .32s ease;pointer-events:none}
+.solution-overlay{position:absolute;z-index:3;inset:0;display:flex;flex-direction:column;justify-content:center;padding:26px 30px;background:rgba(7,34,61,.93);color:white;opacity:0;transform:translateY(18px);transition:opacity .32s ease,transform .32s ease;pointer-events:auto}
 .solution-overlay h3{font-size:27px;margin:0 0 16px}
 .solution-overlay ul{margin:0;padding:0;list-style:none}
 .solution-overlay li{margin:9px 0;line-height:1.5;font-size:16px}
 .solution-overlay li::before{content:"✓";margin-right:10px;color:#a9d8fc;font-weight:900}
 .solution-overlay .more{display:inline-block;margin-top:20px;align-self:flex-start;border:1px solid #adc4da;border-radius:30px;padding:8px 15px;font-size:13px}
-@media(hover:hover) and (pointer:fine){
-.solution-tile:hover img{transform:scale(1.06)}
-.solution-tile:hover .solution-overlay{opacity:1;transform:none}
-.solution-tile:hover .solution-caption{opacity:0;transform:translateY(10px)}
-}
+/* Hover works regardless of browser pointer detection; click/focus fallback. */
+.solution-tile:hover img,.solution-tile.is-open img{transform:scale(1.06)}
+.solution-tile:hover .solution-overlay,.solution-tile:focus-within .solution-overlay,.solution-tile:focus .solution-overlay,.solution-tile.is-open .solution-overlay{opacity:1;transform:translateY(0);visibility:visible}
+.solution-tile:hover .solution-caption,.solution-tile:focus .solution-caption,.solution-tile.is-open .solution-caption{opacity:0;transform:translateY(10px)}
 .solution-tile:focus-visible{outline:3px solid #2b80bf;outline-offset:3px}
 .solution-tile:focus .solution-overlay,.solution-tile.is-open .solution-overlay{opacity:1;transform:none}
 .solution-tile:focus .solution-caption,.solution-tile.is-open .solution-caption{opacity:0}

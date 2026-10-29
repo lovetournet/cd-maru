@@ -623,7 +623,6 @@ footer{
 
 }
 
-
 /* Company photo hover preview */
 h1 .hero-title-hover{display:inline-block;margin:0;font-size:inherit;font-weight:inherit;color:inherit;letter-spacing:inherit;}
 .hero-title-hover{display:inline-block;cursor:default;}
@@ -632,22 +631,22 @@ h1 .hero-title-hover{display:inline-block;margin:0;font-size:inherit;font-weight
 @media(max-width:800px){.hero-photo-preview{position:relative;left:auto;top:auto;width:100%;margin:22px 0 0;display:block;opacity:1;transform:none;pointer-events:auto;}}
 
 
-/* Core product image previews: desktop hover, mobile always visible */
-.product-hover-photo{display:block;width:100%;height:0;object-fit:cover;object-position:center;border-radius:10px;opacity:0;transform:translateY(8px);margin-top:0;transition:height .28s ease,opacity .28s ease,transform .28s ease,margin .28s ease;}
-@media(hover:hover) and (min-width:801px){.card:hover .product-hover-photo,.card:focus-within .product-hover-photo{height:170px;margin-top:18px;opacity:1;transform:translateY(0);}}
-.flooring-showcase{display:flex;align-items:center;gap:28px;margin-top:25px;padding:24px;border:1px solid #e0e9ef;border-radius:18px;background:#fff;box-shadow:0 18px 46px rgba(35,68,95,.07)}
-.flooring-copy{flex:1}.flooring-copy h3{margin:8px 0;font-size:23px;color:var(--navy)}.flooring-copy p{margin:0;color:var(--muted);font-size:14px}
-.flooring-showcase img{width:48%;height:190px;object-fit:cover;border-radius:12px}
-@media(max-width:800px){.product-hover-photo{height:auto;max-height:230px;aspect-ratio:4/3;opacity:1;transform:none;margin-top:18px}.flooring-showcase{display:block}.flooring-showcase img{width:100%;height:auto;aspect-ratio:4/3;margin-top:15px}}
-
-
-/* Mobile-only automatic product gallery */
+@media(max-width:800px){h1 .hero-title-hover{display:block}}
+/* Separate photo solutions section: independent of core product cards */
+.solutions-section{background:#f4f8fb}
+.solutions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.solution-tile{position:relative;display:block;overflow:hidden;border-radius:17px;aspect-ratio:1.67;background:#102a43;box-shadow:0 14px 35px rgba(16,42,67,.1)}
+.solution-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.solution-tile:hover img{transform:scale(1.045)}
+.solution-caption{position:absolute;inset:auto 0 0;padding:48px 25px 22px;color:white;background:linear-gradient(transparent,rgba(8,29,49,.88))}
+.solution-caption small{font-size:12px;letter-spacing:.08em}.solution-caption h3{font-size:24px;margin:3px 0}.solution-caption p{font-size:13px;margin:0;max-height:0;opacity:0;overflow:hidden;transition:max-height .3s,opacity .3s}
+.solution-tile:hover .solution-caption p,.solution-tile:focus-visible .solution-caption p{max-height:65px;opacity:1}
 .mobile-product-gallery{display:none}
 @media(max-width:800px){
- .products-section .products,.products-section .flooring-showcase{display:none}
+ .solutions-grid{display:none}
  .mobile-product-gallery{display:block;border:1px solid #e0e9ef;border-radius:18px;overflow:hidden;background:white;box-shadow:0 18px 46px rgba(35,68,95,.07)}
- .mobile-product-gallery .slide-photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
- .mobile-product-gallery .slide-copy{padding:20px 22px 8px;min-height:185px}
+ .mobile-product-gallery .slide-photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;cursor:pointer}
+ .mobile-product-gallery .slide-copy{padding:18px 22px 8px;min-height:155px}
  .mobile-product-gallery h3{font-size:23px;color:var(--navy);margin:8px 0 4px}
  .mobile-product-gallery p{font-size:14px;color:var(--muted);margin:12px 0}
  .mobile-product-gallery .gallery-controls{display:flex;align-items:center;justify-content:space-between;padding:8px 20px 20px}
@@ -655,8 +654,8 @@ h1 .hero-title-hover{display:inline-block;margin:0;font-size:inherit;font-weight
  .mobile-product-gallery .dot{width:9px;height:9px;border:0;border-radius:50%;background:#cbd6df;padding:0;cursor:pointer}
  .mobile-product-gallery .dot[aria-current=true]{background:var(--blue);width:23px;border-radius:12px}
  .mobile-product-gallery .play-toggle{border:1px solid #dce6ed;background:#f4f8fb;border-radius:20px;padding:7px 13px;font-size:12px;color:var(--navy);font-weight:800}
- .mobile-product-gallery .slide-photo{cursor:pointer}
 }
+
 
 </style>
 </head>
@@ -799,22 +798,6 @@ CHEONGDO ARCHITECTURAL MATERIALS
 </div>
 
 
-
-<div class="mobile-product-gallery" id="mobileProductGallery" aria-label="제품 사진 자동 슬라이드">
-  <img class="slide-photo" id="mobileSlideImage" src="product-1.jpg" alt="석제단열패널 적용 이미지" tabindex="0" role="button" aria-label="자동 재생 일시정지 또는 재생">
-  <div class="slide-copy" aria-live="off">
-    <div class="num" id="mobileSlideNumber">CORE PRODUCT 01</div>
-    <h3 id="mobileSlideTitle">석제단열패널</h3>
-    <div class="eng" id="mobileSlideEnglish">STONE INSULATED PANEL</div>
-    <p id="mobileSlideDescription">천연석 마감과 단열 성능을 하나의 시스템으로 구성한 건축 외벽 솔루션입니다.</p>
-    <span class="tag" id="mobileSlideTag">조달등록제품</span>
-  </div>
-  <div class="gallery-controls">
-    <div class="dots" id="mobileSlideDots" aria-label="슬라이드 선택"></div>
-    <button class="play-toggle" id="mobileSlideToggle" type="button" aria-pressed="false">⏸ 일시정지</button>
-  </div>
-</div>
-
 <div class="products">
 
 
@@ -834,7 +817,6 @@ STONE INSULATED PANEL
 </p>
 
 <span class="tag">조달등록제품</span>
-<img class="product-hover-photo" src="product-1.jpg" alt="석제단열패널 적용 이미지" loading="lazy">
 
 </article>
 
@@ -855,7 +837,6 @@ INTERIOR WALL PANEL
 </p>
 
 <span class="tag">조달등록제품</span>
-<img class="product-hover-photo" src="product-2.jpg" alt="실내벽체마감패널 적용 이미지" loading="lazy">
 
 </article>
 
@@ -876,7 +857,6 @@ TOILET CUBICLE
 </p>
 
 <span class="tag">조달등록제품</span>
-<img class="product-hover-photo" src="product-3.jpg" alt="화장실칸막이 적용 이미지" loading="lazy">
 
 </article>
 
@@ -895,16 +875,30 @@ TOILET CUBICLE
 </div>
 
 
-<div class="flooring-showcase">
-  <div class="flooring-copy"><span class="num">ADDITIONAL PRODUCT</span><h3>SPC 마루</h3><p>공간에 자연스럽게 어우러지는 바닥재</p></div>
-  <img src="product-4.jpg" alt="SPC 마루 적용 이미지" loading="lazy">
-</div>
-
 </div>
 
 </section>
 
 
+
+
+<!-- SEPARATE PHOTO SOLUTIONS: Core product cards above remain text-only -->
+<section id="solutions" class="solutions-section">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">CHEONGDO · PRODUCT SOLUTIONS</div><h2>학교·공공시설을 위한 청도 건축자재</h2></div><p>다양한 공간에 적용되는 청도의 건축자재를 이미지로 만나보세요.</p></div>
+  <div class="solutions-grid">
+   <article class="solution-tile" tabindex="0"><img src="product-1.jpg" alt="석제단열패널 적용 이미지" loading="lazy"><div class="solution-caption"><small>01 · EXTERIOR</small><h3>석제단열패널</h3><p>천연석 마감과 단열을 결합한 외벽 솔루션</p></div></article>
+   <article class="solution-tile" tabindex="0"><img src="product-2.jpg" alt="실내벽체마감패널 적용 이미지" loading="lazy"><div class="solution-caption"><small>02 · INTERIOR</small><h3>실내벽체마감패널</h3><p>교육시설과 공공시설을 위한 실내 벽체 마감</p></div></article>
+   <article class="solution-tile" tabindex="0"><img src="product-3.jpg" alt="화장실칸막이 적용 이미지" loading="lazy"><div class="solution-caption"><small>03 · TOILET</small><h3>화장실칸막이</h3><p>학교·공공시설용 화장실 칸막이 시스템</p></div></article>
+   <article class="solution-tile" tabindex="0"><img src="product-4.jpg" alt="청도마루 SPC 바닥재 이미지" loading="lazy"><div class="solution-caption"><small>04 · FLOORING</small><h3>청도마루</h3><p>내수성 SPC 바닥재</p></div></article>
+  </div>
+  <div class="mobile-product-gallery" id="mobileProductGallery" aria-label="청도 제품 이미지 자동 슬라이드">
+   <img id="mobileSlideImage" class="slide-photo" src="product-1.jpg" alt="석제단열패널 적용 이미지" role="button" tabindex="0" aria-label="사진을 터치하면 자동 재생 정지 또는 재생">
+   <div class="slide-copy"><div class="num" id="mobileSlideNumber">01 · EXTERIOR</div><h3 id="mobileSlideTitle">석제단열패널</h3><div class="eng" id="mobileSlideEnglish">STONE INSULATED PANEL</div><p id="mobileSlideDescription">천연석 마감과 단열을 결합한 외벽 솔루션</p><span class="tag" id="mobileSlideTag">조달등록제품</span></div>
+   <div class="gallery-controls"><div class="dots" id="mobileSlideDots" aria-label="제품 선택"></div><button class="play-toggle" id="mobileSlideToggle" type="button" aria-pressed="false">⏸ 일시정지</button></div>
+  </div>
+ </div>
+</section>
 
 <!-- MESSAGE -->
 
@@ -1137,7 +1131,6 @@ cd-maru.com
 </footer>
 
 
-
 <script>
 (function(){
  const root=document.getElementById('mobileProductGallery');
@@ -1146,7 +1139,7 @@ cd-maru.com
   ['product-1.jpg','CORE PRODUCT 01','석제단열패널','STONE INSULATED PANEL','천연석 마감과 단열 성능을 하나의 시스템으로 구성한 건축 외벽 솔루션입니다.','조달등록제품'],
   ['product-2.jpg','CORE PRODUCT 02','실내벽체마감패널','INTERIOR WALL PANEL','교육시설과 공공시설 등 다양한 실내 공간에 적용하는 벽체 마감 시스템입니다.','조달등록제품'],
   ['product-3.jpg','CORE PRODUCT 03','화장실칸막이','TOILET CUBICLE','학교와 공공시설에 적용하는 방수 PB + HPM 기반 화장실 칸막이 시스템입니다.','조달등록제품'],
-  ['product-4.jpg','ADDITIONAL PRODUCT','SPC 마루','SPC FLOORING','공간에 자연스럽게 어우러지는 바닥재','']
+  ['product-4.jpg','04 · FLOORING','청도마루','SPC FLOORING','내수성 SPC 바닥재','']
  ];
  let current=0,paused=false,timer=null,touchX=null;
  const img=document.getElementById('mobileSlideImage'),toggle=document.getElementById('mobileSlideToggle'),dots=document.getElementById('mobileSlideDots');
@@ -1163,6 +1156,5 @@ cd-maru.com
  show(0);restart();
 })();
 </script>
-
 </body>
 </html>

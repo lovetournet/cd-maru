@@ -1,15 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ko">
-
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>㈜청도 | 건축자재 AI 제조 시스템 기업</title>
-
-<meta name="description"
-content="㈜청도 - 석제단열패널, 실내벽체마감패널, 화장실칸막이 전문 건축자재 AI 제조 시스템기업">
-
+<meta content="㈜청도 - 석제단열패널, 실내벽체마감패널, 화장실칸막이 전문 건축자재 AI 제조 시스템기업" name="description"/>
 <style>
 
 :root{
@@ -671,22 +667,27 @@ h1 .hero-title-hover{display:inline-block;margin:0;font-size:inherit;font-weight
 }
 @media(prefers-reduced-motion:reduce){.solution-tile *{transition:none!important}}
 
+
+/* Mobile: navy product information mirrors the desktop overlay */
+@media(max-width:800px){
+ .mobile-product-gallery .slide-copy{background:#092a49;color:#fff;padding:22px 24px 24px;min-height:290px}
+ .mobile-product-gallery .slide-copy .num{color:#a9d8fc;font-size:12px}
+ .mobile-product-gallery .slide-copy h3{color:#fff;margin:9px 0 13px;font-size:24px}
+ .mobile-product-gallery .slide-copy ul{list-style:none;margin:0;padding:0}
+ .mobile-product-gallery .slide-copy li{font-size:14px;line-height:1.5;margin:7px 0;color:#eef5fb;padding-left:21px;position:relative}
+ .mobile-product-gallery .slide-copy li::before{content:"✓";position:absolute;left:0;color:#a9d8fc;font-weight:900}
+ .mobile-product-gallery #mobileSlideMore{display:inline-block;margin-top:15px;border:1px solid #adc4da;border-radius:13px;padding:8px 12px;color:#fff;font-size:12px;line-height:1.6}
+ .mobile-product-gallery .gallery-controls{background:#fff}
+}
 </style>
 </head>
-
-
 <body>
-
-
 <header>
-
 <div class="wrap nav">
-
-<a href="#" class="brand">
+<a class="brand" href="#">
 ㈜청도
 <small>CHEONGDO ARCHITECTURAL MATERIALS</small>
 </a>
-
 <nav class="navlinks">
 <a href="#company">회사소개</a>
 <a href="#products">핵심제품</a>
@@ -694,213 +695,134 @@ h1 .hero-title-hover{display:inline-block;margin:0;font-size:inherit;font-weight
 <a href="#contact">문의</a>
 <a class="nav-catalog" href="#catalog">CATALOG</a>
 </nav>
-
 </div>
-
 </header>
-
-
 <main>
-
-
 <!-- HERO -->
-
 <section class="hero">
-
 <div class="wrap hero-inner">
-
 <div class="eyebrow">
 CHEONGDO ARCHITECTURAL MATERIALS
 </div>
-
 <h1>
 <span class="hero-title-hover" tabindex="0">건축의 새로운 기준</span>
-<img class="hero-photo-preview" src="청도전경.png" alt="청도 제조시설 전경">
+<img alt="청도 제조시설 전경" class="hero-photo-preview" src="청도전경.png"/>
 <span>건축자재 AI 제조 시스템기업 ㈜청도</span>
 </h1>
-
 <p>
 건축 내·외장재를 직접 개발·생산·시공하며,
 품질과 안전성, 현장 적용성을 고려한
 건축자재 시스템을 개발·공급하고 있습니다.
 </p>
-
 <div class="hero-actions">
-
 <a class="btn btn-primary" href="#products">
 3대 핵심제품 보기
 </a>
-
 <a class="btn btn-white" href="#catalog">
 카탈로그 보기
 </a>
-
 </div>
-
 </div>
-
 </section>
-
-
-
 <!-- COMPANY -->
-
-<section id="company" class="company">
-
+<section class="company" id="company">
 <div class="wrap">
-
 <div class="section-head">
-
 <h2>회사 한눈에 보기</h2>
-
 <p>
 공공건축 현장에서 필요한 제품과 기술을
 빠르게 확인할 수 있도록 청도의 핵심 정보를 정리했습니다.
 </p>
-
 </div>
-
 <div class="facts">
-
 <div class="fact">
 <b>CHEONGDO</b>
 <strong>건축자재 제조 전문기업</strong>
 <span>제품 개발 · 제조 · 공급</span>
 </div>
-
 <div class="fact">
 <b>장성군 삼서면</b>
 <strong>본사 및 제조시설</strong>
 <span>건축자재 생산 기반</span>
 </div>
-
 <div class="fact">
 <b>조달등록제품</b>
 <strong>공공조달 대응</strong>
 <span>공공기관 · 교육시설 납품</span>
 </div>
-
 <div class="fact">
 <b>장애인기업</b>
 <strong>공공시장 대응</strong>
 <span>다양한 공공시설 적용</span>
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
-
-
-
 <!-- SEPARATE PHOTO SOLUTIONS: Core product cards above remain text-only -->
-<section id="solutions" class="solutions-section">
- <div class="wrap">
-  <div class="section-head"><div><div class="eyebrow">CHEONGDO · PRODUCT SOLUTIONS</div><h2>학교·공공시설을 위한 청도 건축자재</h2></div><p>다양한 공간에 적용되는 청도의 건축자재를 이미지로 만나보세요.</p></div>
-     <div class="solutions-grid">
-    <article class="solution-tile" tabindex="0" role="button" aria-label="석제단열패널 상세 정보 보기" aria-expanded="false"><img src="product-1.jpg" alt="석제단열패널 적용 이미지" loading="lazy"><div class="solution-caption"><small>01 · EXTERIOR</small><h3>석제단열패널</h3><p>외벽 단열·마감 일체형 솔루션</p></div><div class="solution-overlay"><h3>석제단열패널</h3><ul><li>외벽 단열과 천연석 마감을 하나로</li><li>천연석 마감의 고급스러운 외관</li><li>학교·공공건축 외벽 적용</li><li>실물모형시험 검증, 무용점 내진타공각관</li></ul><span class="more">조달 식별번호 24231310 <br> 조달 식별번호 24231313</span></div></article>
-    <article class="solution-tile" tabindex="0" role="button" aria-label="실내벽체마감패널 상세 정보 보기" aria-expanded="false"><img src="product-2.jpg" alt="실내벽체마감패널 적용 이미지" loading="lazy"><div class="solution-caption"><small>02 · INTERIOR</small><h3>실내벽체마감패널</h3><p>교육시설 실내 벽체 마감</p></div><div class="solution-overlay"><h3>실내벽체마감패널</h3><ul><li>다양한 색상과 공간 디자인</li><li>현장 여건에 맞춘 시공 방식</li><li>학교·공공시설 실내벽체 적용</li><li>HPM+마그네슘보드, 하지·스터드공법</li></ul><span class="more">조달 식별번호 24211119<br> 조달 식별번호 24235276</span></div></article>
-    <article class="solution-tile" tabindex="0" role="button" aria-label="화장실칸막이 상세 정보 보기" aria-expanded="false"><img src="product-3.jpg" alt="화장실칸막이 적용 이미지" loading="lazy"><div class="solution-caption"><small>03 · CUBICLE</small><h3>화장실칸막이</h3><p>공공화장실용 조달 등록 제품</p></div><div class="solution-overlay"><h3>화장실칸막이</h3><ul><li>방수 PB·HPM 마감재 적용</li><li>다양한 규격 및 형태 선택</li><li>학교·공공화장실 적용</li><li>안심스크린, 천장형, 장애인슬라이딩, 소변기칸막이</li></ul><span class="more">조달 식별번호 22786257<br>조달 식별번호 22784455 </span></div></article>
-    <article class="solution-tile" tabindex="0" role="button" aria-label="청도마루 상세 정보 보기" aria-expanded="false"><img src="product-4.jpg" alt="청도마루 적용 이미지" loading="lazy"><div class="solution-caption"><small>04 · FLOORING</small><h3>청도마루</h3><p>내수성 SPC 바닥재</p></div><div class="solution-overlay"><h3>청도마루</h3><ul><li>석분 기반 SPC 코어</li><li>내수성과 유지관리 편의성</li><li>다양한 우드 디자인</li><li>KC안전확인신고 완료, 침수TEST</li></ul><span class="more">학교장터 202610239674182<br>제품 상담 061-803-9592</span></div></article>
-   </div>
-<div class="mobile-product-gallery" id="mobileProductGallery" aria-label="청도 제품 이미지 자동 슬라이드">
-   <img id="mobileSlideImage" class="slide-photo" src="product-1.jpg" alt="석제단열패널 적용 이미지" role="button" tabindex="0" aria-label="사진을 터치하면 자동 재생 정지 또는 재생">
-   <div class="slide-copy"><div class="num" id="mobileSlideNumber">01 · EXTERIOR</div><h3 id="mobileSlideTitle">석제단열패널</h3><div class="eng" id="mobileSlideEnglish">STONE INSULATED PANEL</div><p id="mobileSlideDescription">천연석 마감과 단열을 결합한 외벽 솔루션</p><span class="tag" id="mobileSlideTag">조달등록제품</span></div>
-   <div class="gallery-controls"><div class="dots" id="mobileSlideDots" aria-label="제품 선택"></div><button class="play-toggle" id="mobileSlideToggle" type="button" aria-pressed="false">⏸ 일시정지</button></div>
-  </div>
- </div>
-</section>
-
-
-
-
-<!-- PRODUCTS -->
-
-<section id="products" class="products-section">
-
+<section class="solutions-section" id="solutions">
 <div class="wrap">
-
+<div class="section-head"><div><div class="eyebrow">CHEONGDO · PRODUCT SOLUTIONS</div><h2>학교·공공시설을 위한 청도 건축자재</h2></div><p>다양한 공간에 적용되는 청도의 건축자재를 이미지로 만나보세요.</p></div>
+<div class="solutions-grid">
+<article aria-expanded="false" aria-label="석제단열패널 상세 정보 보기" class="solution-tile" role="button" tabindex="0"><img alt="석제단열패널 적용 이미지" loading="lazy" src="product-1.jpg"/><div class="solution-caption"><small>01 · EXTERIOR</small><h3>석제단열패널</h3><p>외벽 단열·마감 일체형 솔루션</p></div><div class="solution-overlay"><h3>석제단열패널</h3><ul><li>외벽 단열과 천연석 마감을 하나로</li><li>천연석 마감의 고급스러운 외관</li><li>학교·공공건축 외벽 적용</li><li>실물모형시험 검증, 무용점 내진타공각관</li></ul><span class="more">조달 식별번호 24231310 <br/> 조달 식별번호 24231313</span></div></article>
+<article aria-expanded="false" aria-label="실내벽체마감패널 상세 정보 보기" class="solution-tile" role="button" tabindex="0"><img alt="실내벽체마감패널 적용 이미지" loading="lazy" src="product-2.jpg"/><div class="solution-caption"><small>02 · INTERIOR</small><h3>실내벽체마감패널</h3><p>교육시설 실내 벽체 마감</p></div><div class="solution-overlay"><h3>실내벽체마감패널</h3><ul><li>다양한 색상과 공간 디자인</li><li>현장 여건에 맞춘 시공 방식</li><li>학교·공공시설 실내벽체 적용</li><li>HPM+마그네슘보드, 하지·스터드공법</li></ul><span class="more">조달 식별번호 24211119<br/> 조달 식별번호 24235276</span></div></article>
+<article aria-expanded="false" aria-label="화장실칸막이 상세 정보 보기" class="solution-tile" role="button" tabindex="0"><img alt="화장실칸막이 적용 이미지" loading="lazy" src="product-3.jpg"/><div class="solution-caption"><small>03 · CUBICLE</small><h3>화장실칸막이</h3><p>공공화장실용 조달 등록 제품</p></div><div class="solution-overlay"><h3>화장실칸막이</h3><ul><li>방수 PB·HPM 마감재 적용</li><li>다양한 규격 및 형태 선택</li><li>학교·공공화장실 적용</li><li>안심스크린, 천장형, 장애인슬라이딩, 소변기칸막이</li></ul><span class="more">조달 식별번호 22786257<br/>조달 식별번호 22784455 </span></div></article>
+<article aria-expanded="false" aria-label="청도마루 상세 정보 보기" class="solution-tile" role="button" tabindex="0"><img alt="청도마루 적용 이미지" loading="lazy" src="product-4.jpg"/><div class="solution-caption"><small>04 · FLOORING</small><h3>청도마루</h3><p>내수성 SPC 바닥재</p></div><div class="solution-overlay"><h3>청도마루</h3><ul><li>석분 기반 SPC 코어</li><li>내수성과 유지관리 편의성</li><li>다양한 우드 디자인</li><li>KC안전확인신고 완료, 침수TEST</li></ul><span class="more">학교장터 202610239674182<br/>제품 상담 061-803-9592</span></div></article>
+</div>
+<div aria-label="청도 제품 이미지 자동 슬라이드" class="mobile-product-gallery" id="mobileProductGallery">
+<img alt="석제단열패널 적용 이미지" aria-label="사진을 터치하면 자동 재생 정지 또는 재생" class="slide-photo" id="mobileSlideImage" role="button" src="product-1.jpg" tabindex="0"/>
+<div class="slide-copy"><div class="num" id="mobileSlideNumber"></div><h3 id="mobileSlideTitle"></h3><ul id="mobileSlideFeatures"></ul><div id="mobileSlideMore"></div></div>
+<div class="gallery-controls"><div aria-label="제품 선택" class="dots" id="mobileSlideDots"></div><button aria-pressed="false" class="play-toggle" id="mobileSlideToggle" type="button">⏸ 일시정지</button></div>
+</div>
+</div>
+</section>
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+<div class="wrap">
 <div class="section-head">
-
 <h2>청도의 3대 핵심제품</h2>
-
 <p>
 외벽부터 실내벽체, 화장실 공간까지
 공공건축에 필요한 주요 건축자재를 공급합니다.
 </p>
-
 </div>
-
-
 <div class="products">
-
-
 <article class="card">
-
 <div class="num">CORE PRODUCT 01</div>
-
 <h3>석제단열패널</h3>
-
 <div class="eng">
 STONE INSULATED PANEL
 </div>
-
 <p>
 천연석 마감과 단열 성능을 하나의 시스템으로 구성한
 건축 외벽 솔루션입니다.
 </p>
-
 <span class="tag">조달등록제품</span>
-
 </article>
-
-
 <article class="card">
-
 <div class="num">CORE PRODUCT 02</div>
-
 <h3>실내벽체마감패널</h3>
-
 <div class="eng">
 INTERIOR WALL PANEL
 </div>
-
 <p>
 교육시설과 공공시설 등 다양한 실내 공간에 적용하는
 벽체 마감 시스템입니다.
 </p>
-
 <span class="tag">조달등록제품</span>
-
 </article>
-
-
 <article class="card">
-
 <div class="num">CORE PRODUCT 03</div>
-
 <h3>화장실칸막이</h3>
-
 <div class="eng">
 TOILET CUBICLE
 </div>
-
 <p>
 학교와 공공시설에 적용하는
 방수 PB + HPM 기반 화장실 칸막이 시스템입니다.
 </p>
-
 <span class="tag">조달등록제품</span>
-
 </article>
-
-
 </div>
-
-
 <div class="flow">
 설계
 <span>→</span>
@@ -910,211 +832,139 @@ TOILET CUBICLE
 <span>→</span>
 현장 적용
 </div>
-
-
 </div>
-
 </section>
-
-
-
 <!-- MESSAGE -->
-
 <section class="standard">
-
 <div class="wrap">
-
 <div class="eyebrow">
 CHEONGDO SYSTEM
 </div>
-
 <h2>
 건축자재의 품질과 시공 효율을 함께 생각합니다.
 </h2>
-
 <p>
 ㈜청도는 건축 내·외장재를 직접 개발·생산하며,
 현장에서 요구되는 안전성·내구성·시공성을 고려한
 건축자재 시스템을 만들어갑니다.
 </p>
-
 </div>
-
 </section>
-
-
-
 <!-- CATALOG -->
-
-<section id="catalog" class="catalog-section">
-
+<section class="catalog-section" id="catalog">
 <div class="wrap">
-
 <div class="section-head">
-
 <h2>CHEONGDO CATALOG</h2>
-
 <p>
 ㈜청도의 회사소개와 제품 구성,
 기술 및 주요 시공사례를 확인하실 수 있습니다.
 </p>
-
 </div>
-
 <div class="catalog-note">
 <div class="catalog-pill">
-2026 CHEONGDO COMPANY & PRODUCT CATALOG
+2026 CHEONGDO COMPANY &amp; PRODUCT CATALOG
 </div>
 </div>
-
-
 <div class="catalog-pages">
-
 <figure class="catalog-page">
-<img src="catalog-01.webp" alt="청도 카탈로그 1페이지">
+<img alt="청도 카탈로그 1페이지" src="catalog-01.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-24.webp" alt="청도 카탈로그 24페이지" loading="lazy">
+<img alt="청도 카탈로그 24페이지" loading="lazy" src="catalog-24.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-02.webp" alt="청도 카탈로그 2페이지" loading="lazy">
+<img alt="청도 카탈로그 2페이지" loading="lazy" src="catalog-02.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-03.webp" alt="청도 카탈로그 3페이지" loading="lazy">
+<img alt="청도 카탈로그 3페이지" loading="lazy" src="catalog-03.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-04.webp" alt="청도 카탈로그 4페이지" loading="lazy">
+<img alt="청도 카탈로그 4페이지" loading="lazy" src="catalog-04.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-05.webp" alt="청도 카탈로그 5페이지" loading="lazy">
+<img alt="청도 카탈로그 5페이지" loading="lazy" src="catalog-05.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-06.webp" alt="청도 카탈로그 6페이지" loading="lazy">
+<img alt="청도 카탈로그 6페이지" loading="lazy" src="catalog-06.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-07.webp" alt="청도 카탈로그 7페이지" loading="lazy">
+<img alt="청도 카탈로그 7페이지" loading="lazy" src="catalog-07.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-08.webp" alt="청도 카탈로그 8페이지" loading="lazy">
+<img alt="청도 카탈로그 8페이지" loading="lazy" src="catalog-08.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-09.webp" alt="청도 카탈로그 9페이지" loading="lazy">
+<img alt="청도 카탈로그 9페이지" loading="lazy" src="catalog-09.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-10.webp" alt="청도 카탈로그 10페이지" loading="lazy">
+<img alt="청도 카탈로그 10페이지" loading="lazy" src="catalog-10.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-11.webp" alt="청도 카탈로그 11페이지" loading="lazy">
+<img alt="청도 카탈로그 11페이지" loading="lazy" src="catalog-11.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-12.webp" alt="청도 카탈로그 12페이지" loading="lazy">
+<img alt="청도 카탈로그 12페이지" loading="lazy" src="catalog-12.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-13.webp" alt="청도 카탈로그 13페이지" loading="lazy">
+<img alt="청도 카탈로그 13페이지" loading="lazy" src="catalog-13.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-14.webp" alt="청도 카탈로그 14페이지" loading="lazy">
+<img alt="청도 카탈로그 14페이지" loading="lazy" src="catalog-14.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-15.webp" alt="청도 카탈로그 15페이지" loading="lazy">
+<img alt="청도 카탈로그 15페이지" loading="lazy" src="catalog-15.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-16.webp" alt="청도 카탈로그 16페이지" loading="lazy">
+<img alt="청도 카탈로그 16페이지" loading="lazy" src="catalog-16.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-17.webp" alt="청도 카탈로그 17페이지" loading="lazy">
+<img alt="청도 카탈로그 17페이지" loading="lazy" src="catalog-17.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-18.webp" alt="청도 카탈로그 18페이지" loading="lazy">
+<img alt="청도 카탈로그 18페이지" loading="lazy" src="catalog-18.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-19.webp" alt="청도 카탈로그 19페이지" loading="lazy">
+<img alt="청도 카탈로그 19페이지" loading="lazy" src="catalog-19.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-20.webp" alt="청도 카탈로그 20페이지" loading="lazy">
+<img alt="청도 카탈로그 20페이지" loading="lazy" src="catalog-20.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-21.webp" alt="청도 카탈로그 21페이지" loading="lazy">
+<img alt="청도 카탈로그 21페이지" loading="lazy" src="catalog-21.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-22.webp" alt="청도 카탈로그 22페이지" loading="lazy">
+<img alt="청도 카탈로그 22페이지" loading="lazy" src="catalog-22.webp"/>
 </figure>
-
 <figure class="catalog-page">
-<img src="catalog-23.webp" alt="청도 카탈로그 23페이지" loading="lazy">
+<img alt="청도 카탈로그 23페이지" loading="lazy" src="catalog-23.webp"/>
 </figure>
-
-
 </div>
-
 </div>
-
 </section>
-
-
-
 <!-- CONTACT -->
-
-<section id="contact" class="contact-section">
-
+<section class="contact-section" id="contact">
 <div class="wrap">
-
 <div class="contact">
-
 <div class="contact-main">
-
 <div class="eyebrow">
 CONTACT
 </div>
-
 <h2>제품 · 조달 문의</h2>
-
 <p>
 제품 사양, 납품 및 조달 관련 문의는
 ㈜청도로 연락해 주세요.
 </p>
-
 <div class="contact-actions">
-
 <a class="btn" href="tel:0618039592">
 전화 문의
 </a>
-
 <a class="btn" href="#catalog">
 카탈로그 보기
 </a>
-
 </div>
-
 </div>
-
-
 <div class="contact-info">
-
 <strong>㈜청도</strong>
-
 <span class="label">ADDRESS</span>
 전남 장성군 삼서면 영장로 1930-29
 
@@ -1128,27 +978,15 @@ CONTACT
 cd-maru.com
 
 </div>
-
-
 </div>
-
 </div>
-
 </section>
-
-
 </main>
-
-
 <footer>
-
 <div class="wrap">
 © 2026 CHEONGDO. All rights reserved.
 </div>
-
 </footer>
-
-
 <script>
 // Desktop product gallery: same full-panel hover as index1.html.
 (function(){
@@ -1168,26 +1006,44 @@ cd-maru.com
 (function(){
  const root=document.getElementById('mobileProductGallery');
  if(!root)return;
- const items=[
-  ['product-1.jpg','CORE PRODUCT 01','석제단열패널','STONE INSULATED PANEL','천연석 마감과 단열 성능을 하나의 시스템으로 구성한 건축 외벽 솔루션입니다.','조달등록제품'],
-  ['product-2.jpg','CORE PRODUCT 02','실내벽체마감패널','INTERIOR WALL PANEL','교육시설과 공공시설 등 다양한 실내 공간에 적용하는 벽체 마감 시스템입니다.','조달등록제품'],
-  ['product-3.jpg','CORE PRODUCT 03','화장실칸막이','TOILET CUBICLE','학교와 공공시설에 적용하는 방수 PB + HPM 기반 화장실 칸막이 시스템입니다.','조달등록제품'],
-  ['product-4.jpg','04 · FLOORING','청도마루','SPC FLOORING','내수성 SPC 바닥재','']
- ];
- let current=0,paused=false,timer=null,touchX=null;
- const img=document.getElementById('mobileSlideImage'),toggle=document.getElementById('mobileSlideToggle'),dots=document.getElementById('mobileSlideDots');
- items.forEach((_,i)=>{const b=document.createElement('button');b.className='dot';b.type='button';b.setAttribute('aria-label',(i+1)+'번째 제품 보기');b.addEventListener('click',()=>{show(i);restart()});dots.appendChild(b)});
- function show(i){current=(i+items.length)%items.length;const a=items[current];img.src=a[0];img.alt=a[2]+' 적용 이미지';document.getElementById('mobileSlideNumber').textContent=a[1];document.getElementById('mobileSlideTitle').textContent=a[2];document.getElementById('mobileSlideEnglish').textContent=a[3];document.getElementById('mobileSlideDescription').textContent=a[4];const tag=document.getElementById('mobileSlideTag');tag.textContent=a[5];tag.style.display=a[5]?'inline-block':'none';[...dots.children].forEach((b,j)=>b.setAttribute('aria-current',String(j===current)))}
+ const items=[{"image": "product-1.jpg", "index": "01 · EXTERIOR", "title": "석제단열패널", "features": ["외벽 단열과 천연석 마감을 하나로", "천연석 마감의 고급스러운 외관", "학교·공공건축 외벽 적용", "실물모형시험 검증, 무용점 내진타공각관"], "more_html": "조달 식별번호 24231310 <br/> 조달 식별번호 24231313"}, {"image": "product-2.jpg", "index": "02 · INTERIOR", "title": "실내벽체마감패널", "features": ["다양한 색상과 공간 디자인", "현장 여건에 맞춘 시공 방식", "학교·공공시설 실내벽체 적용", "HPM+마그네슘보드, 하지·스터드공법"], "more_html": "조달 식별번호 24211119<br/> 조달 식별번호 24235276"}, {"image": "product-3.jpg", "index": "03 · CUBICLE", "title": "화장실칸막이", "features": ["방수 PB·HPM 마감재 적용", "다양한 규격 및 형태 선택", "학교·공공화장실 적용", "안심스크린, 천장형, 장애인슬라이딩, 소변기칸막이"], "more_html": "조달 식별번호 22786257<br/>조달 식별번호 22784455 "}, {"image": "product-4.jpg", "index": "04 · FLOORING", "title": "청도마루", "features": ["석분 기반 SPC 코어", "내수성과 유지관리 편의성", "다양한 우드 디자인", "KC안전확인신고 완료, 침수TEST"], "more_html": "학교장터 202610239674182<br/>제품 상담 061-803-9592"}];
+ let current=0,paused=false,timer=null,touchX=null,suppressClick=false;
+ const img=document.getElementById('mobileSlideImage');
+ const toggle=document.getElementById('mobileSlideToggle');
+ const dots=document.getElementById('mobileSlideDots');
+ const num=document.getElementById('mobileSlideNumber');
+ const title=document.getElementById('mobileSlideTitle');
+ const features=document.getElementById('mobileSlideFeatures');
+ const more=document.getElementById('mobileSlideMore');
+ items.forEach((_,i)=>{
+  const b=document.createElement('button');
+  b.className='dot';b.type='button';b.setAttribute('aria-label',(i+1)+'번째 제품 보기');
+  b.addEventListener('click',()=>{show(i);restart()});dots.appendChild(b);
+ });
+ function show(i){
+  current=(i+items.length)%items.length;
+  const a=items[current];
+  img.src=a.image;img.alt=a.title+' 적용 이미지';
+  num.textContent=a.index;title.textContent=a.title;
+  features.replaceChildren();
+  a.features.forEach(value=>{const li=document.createElement('li');li.textContent=value;features.appendChild(li)});
+  more.innerHTML=a.more_html;
+  [...dots.children].forEach((b,j)=>b.setAttribute('aria-current',String(j===current)));
+ }
  function restart(){clearInterval(timer);timer=null;if(!paused&&window.matchMedia('(max-width:800px)').matches)timer=setInterval(()=>show(current+1),2000)}
  function pauseToggle(){paused=!paused;toggle.textContent=paused?'▶ 다시 재생':'⏸ 일시정지';toggle.setAttribute('aria-pressed',String(paused));restart()}
- img.addEventListener('click',pauseToggle);img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pauseToggle()}});
+ img.addEventListener('click',()=>{if(suppressClick){suppressClick=false;return}pauseToggle()});
+ img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pauseToggle()}});
  toggle.addEventListener('click',pauseToggle);
  img.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});
- img.addEventListener('touchend',e=>{if(touchX===null)return;const delta=e.changedTouches[0].screenX-touchX;touchX=null;if(Math.abs(delta)>45){e.preventDefault();show(current+(delta<0?1:-1));restart()}},{passive:false});
+ img.addEventListener('touchend',e=>{
+  if(touchX===null)return;
+  const delta=e.changedTouches[0].screenX-touchX;touchX=null;
+  if(Math.abs(delta)>45){suppressClick=true;show(current+(delta<0?1:-1));restart();setTimeout(()=>{suppressClick=false},350)}
+ },{passive:true});
  window.addEventListener('resize',restart);
  document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInterval(timer)}else restart()});
  show(0);restart();
-})();
-</script>
+})();</script>
 </body>
 </html>

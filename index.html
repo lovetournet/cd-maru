@@ -631,6 +631,33 @@ h1 .hero-title-hover{display:inline-block;margin:0;font-size:inherit;font-weight
 .hero-title-hover:hover ~ .hero-photo-preview,.hero-title-hover:focus-visible ~ .hero-photo-preview{opacity:1;transform:translateY(0) scale(1);}
 @media(max-width:800px){.hero-photo-preview{position:relative;left:auto;top:auto;width:100%;margin:22px 0 0;display:block;opacity:1;transform:none;pointer-events:auto;}}
 
+
+/* Core product image previews: desktop hover, mobile always visible */
+.product-hover-photo{display:block;width:100%;height:0;object-fit:cover;object-position:center;border-radius:10px;opacity:0;transform:translateY(8px);margin-top:0;transition:height .28s ease,opacity .28s ease,transform .28s ease,margin .28s ease;}
+@media(hover:hover) and (min-width:801px){.card:hover .product-hover-photo,.card:focus-within .product-hover-photo{height:170px;margin-top:18px;opacity:1;transform:translateY(0);}}
+.flooring-showcase{display:flex;align-items:center;gap:28px;margin-top:25px;padding:24px;border:1px solid #e0e9ef;border-radius:18px;background:#fff;box-shadow:0 18px 46px rgba(35,68,95,.07)}
+.flooring-copy{flex:1}.flooring-copy h3{margin:8px 0;font-size:23px;color:var(--navy)}.flooring-copy p{margin:0;color:var(--muted);font-size:14px}
+.flooring-showcase img{width:48%;height:190px;object-fit:cover;border-radius:12px}
+@media(max-width:800px){.product-hover-photo{height:auto;max-height:230px;aspect-ratio:4/3;opacity:1;transform:none;margin-top:18px}.flooring-showcase{display:block}.flooring-showcase img{width:100%;height:auto;aspect-ratio:4/3;margin-top:15px}}
+
+
+/* Mobile-only automatic product gallery */
+.mobile-product-gallery{display:none}
+@media(max-width:800px){
+ .products-section .products,.products-section .flooring-showcase{display:none}
+ .mobile-product-gallery{display:block;border:1px solid #e0e9ef;border-radius:18px;overflow:hidden;background:white;box-shadow:0 18px 46px rgba(35,68,95,.07)}
+ .mobile-product-gallery .slide-photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+ .mobile-product-gallery .slide-copy{padding:20px 22px 8px;min-height:185px}
+ .mobile-product-gallery h3{font-size:23px;color:var(--navy);margin:8px 0 4px}
+ .mobile-product-gallery p{font-size:14px;color:var(--muted);margin:12px 0}
+ .mobile-product-gallery .gallery-controls{display:flex;align-items:center;justify-content:space-between;padding:8px 20px 20px}
+ .mobile-product-gallery .dots{display:flex;gap:9px}
+ .mobile-product-gallery .dot{width:9px;height:9px;border:0;border-radius:50%;background:#cbd6df;padding:0;cursor:pointer}
+ .mobile-product-gallery .dot[aria-current=true]{background:var(--blue);width:23px;border-radius:12px}
+ .mobile-product-gallery .play-toggle{border:1px solid #dce6ed;background:#f4f8fb;border-radius:20px;padding:7px 13px;font-size:12px;color:var(--navy);font-weight:800}
+ .mobile-product-gallery .slide-photo{cursor:pointer}
+}
+
 </style>
 </head>
 
@@ -772,6 +799,22 @@ CHEONGDO ARCHITECTURAL MATERIALS
 </div>
 
 
+
+<div class="mobile-product-gallery" id="mobileProductGallery" aria-label="제품 사진 자동 슬라이드">
+  <img class="slide-photo" id="mobileSlideImage" src="product-1.jpg" alt="석제단열패널 적용 이미지" tabindex="0" role="button" aria-label="자동 재생 일시정지 또는 재생">
+  <div class="slide-copy" aria-live="off">
+    <div class="num" id="mobileSlideNumber">CORE PRODUCT 01</div>
+    <h3 id="mobileSlideTitle">석제단열패널</h3>
+    <div class="eng" id="mobileSlideEnglish">STONE INSULATED PANEL</div>
+    <p id="mobileSlideDescription">천연석 마감과 단열 성능을 하나의 시스템으로 구성한 건축 외벽 솔루션입니다.</p>
+    <span class="tag" id="mobileSlideTag">조달등록제품</span>
+  </div>
+  <div class="gallery-controls">
+    <div class="dots" id="mobileSlideDots" aria-label="슬라이드 선택"></div>
+    <button class="play-toggle" id="mobileSlideToggle" type="button" aria-pressed="false">⏸ 일시정지</button>
+  </div>
+</div>
+
 <div class="products">
 
 
@@ -791,6 +834,7 @@ STONE INSULATED PANEL
 </p>
 
 <span class="tag">조달등록제품</span>
+<img class="product-hover-photo" src="product-1.jpg" alt="석제단열패널 적용 이미지" loading="lazy">
 
 </article>
 
@@ -811,6 +855,7 @@ INTERIOR WALL PANEL
 </p>
 
 <span class="tag">조달등록제품</span>
+<img class="product-hover-photo" src="product-2.jpg" alt="실내벽체마감패널 적용 이미지" loading="lazy">
 
 </article>
 
@@ -831,6 +876,7 @@ TOILET CUBICLE
 </p>
 
 <span class="tag">조달등록제품</span>
+<img class="product-hover-photo" src="product-3.jpg" alt="화장실칸막이 적용 이미지" loading="lazy">
 
 </article>
 
@@ -848,6 +894,11 @@ TOILET CUBICLE
 현장 적용
 </div>
 
+
+<div class="flooring-showcase">
+  <div class="flooring-copy"><span class="num">ADDITIONAL PRODUCT</span><h3>SPC 마루</h3><p>공간에 자연스럽게 어우러지는 바닥재</p></div>
+  <img src="product-4.jpg" alt="SPC 마루 적용 이미지" loading="lazy">
+</div>
 
 </div>
 
@@ -1085,6 +1136,33 @@ cd-maru.com
 
 </footer>
 
+
+
+<script>
+(function(){
+ const root=document.getElementById('mobileProductGallery');
+ if(!root)return;
+ const items=[
+  ['product-1.jpg','CORE PRODUCT 01','석제단열패널','STONE INSULATED PANEL','천연석 마감과 단열 성능을 하나의 시스템으로 구성한 건축 외벽 솔루션입니다.','조달등록제품'],
+  ['product-2.jpg','CORE PRODUCT 02','실내벽체마감패널','INTERIOR WALL PANEL','교육시설과 공공시설 등 다양한 실내 공간에 적용하는 벽체 마감 시스템입니다.','조달등록제품'],
+  ['product-3.jpg','CORE PRODUCT 03','화장실칸막이','TOILET CUBICLE','학교와 공공시설에 적용하는 방수 PB + HPM 기반 화장실 칸막이 시스템입니다.','조달등록제품'],
+  ['product-4.jpg','ADDITIONAL PRODUCT','SPC 마루','SPC FLOORING','공간에 자연스럽게 어우러지는 바닥재','']
+ ];
+ let current=0,paused=false,timer=null,touchX=null;
+ const img=document.getElementById('mobileSlideImage'),toggle=document.getElementById('mobileSlideToggle'),dots=document.getElementById('mobileSlideDots');
+ items.forEach((_,i)=>{const b=document.createElement('button');b.className='dot';b.type='button';b.setAttribute('aria-label',(i+1)+'번째 제품 보기');b.addEventListener('click',()=>{show(i);restart()});dots.appendChild(b)});
+ function show(i){current=(i+items.length)%items.length;const a=items[current];img.src=a[0];img.alt=a[2]+' 적용 이미지';document.getElementById('mobileSlideNumber').textContent=a[1];document.getElementById('mobileSlideTitle').textContent=a[2];document.getElementById('mobileSlideEnglish').textContent=a[3];document.getElementById('mobileSlideDescription').textContent=a[4];const tag=document.getElementById('mobileSlideTag');tag.textContent=a[5];tag.style.display=a[5]?'inline-block':'none';[...dots.children].forEach((b,j)=>b.setAttribute('aria-current',String(j===current)))}
+ function restart(){clearInterval(timer);timer=null;if(!paused&&window.matchMedia('(max-width:800px)').matches)timer=setInterval(()=>show(current+1),2000)}
+ function pauseToggle(){paused=!paused;toggle.textContent=paused?'▶ 다시 재생':'⏸ 일시정지';toggle.setAttribute('aria-pressed',String(paused));restart()}
+ img.addEventListener('click',pauseToggle);img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pauseToggle()}});
+ toggle.addEventListener('click',pauseToggle);
+ img.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});
+ img.addEventListener('touchend',e=>{if(touchX===null)return;const delta=e.changedTouches[0].screenX-touchX;touchX=null;if(Math.abs(delta)>45){e.preventDefault();show(current+(delta<0?1:-1));restart()}},{passive:false});
+ window.addEventListener('resize',restart);
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInterval(timer)}else restart()});
+ show(0);restart();
+})();
+</script>
 
 </body>
 </html>

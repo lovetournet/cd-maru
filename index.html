@@ -623,6 +623,14 @@ footer{
 
 }
 
+
+/* Company photo hover preview */
+h1 .hero-title-hover{display:inline-block;margin:0;font-size:inherit;font-weight:inherit;color:inherit;letter-spacing:inherit;}
+.hero-title-hover{display:inline-block;cursor:default;}
+.hero-photo-preview{position:absolute;left:min(55%,640px);top:18%;width:min(520px,43vw);aspect-ratio:1605/881;object-fit:cover;border-radius:16px;box-shadow:0 24px 65px rgba(16,42,67,.23);opacity:0;transform:translateY(14px) scale(.97);pointer-events:none;transition:opacity .3s ease,transform .3s ease;z-index:3;}
+.hero-title-hover:hover ~ .hero-photo-preview,.hero-title-hover:focus-visible ~ .hero-photo-preview{opacity:1;transform:translateY(0) scale(1);}
+@media(max-width:800px){.hero-photo-preview{position:relative;left:auto;top:auto;width:100%;margin-top:18px;display:none;opacity:1;transform:none;}.hero-title-hover:focus-visible ~ .hero-photo-preview,.hero-title-hover:hover ~ .hero-photo-preview{display:block;}}
+
 </style>
 </head>
 
@@ -666,7 +674,8 @@ CHEONGDO ARCHITECTURAL MATERIALS
 </div>
 
 <h1>
-건축의 새로운 기준
+<span class="hero-title-hover" tabindex="0">건축의 새로운 기준</span>
+<img class="hero-photo-preview" src="청도전경.png" alt="청도 제조시설 전경">
 <span>건축자재 AI 제조 시스템기업 ㈜청도</span>
 </h1>
 
